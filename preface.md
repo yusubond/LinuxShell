@@ -18,6 +18,8 @@ ash shell 是由Kenneth Almquist编写的，Linux中占用系统资源最少的�
 - csh
 csh 是Linux比较大的内核，它由以William Joy为代表的共计47位作者编成，共有52个内部命令。该shell其实是指向/bin/tcsh这样的一个shell，也就是说，csh其实就是tcsh。
 
+本文所介绍的就是Bash Shell编程。
+
 ### 【知识拓展】
 程序设计语言大体上可以分为两类：编译型语言和解释型语言。
 
