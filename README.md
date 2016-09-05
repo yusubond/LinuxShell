@@ -6,10 +6,14 @@ Shell虽然不是Linux/Unix系统内核的一部分，但它调用了系统核�
 
 ## 目录
 
-[第一个小程序](A00.md)
+* [第一个小程序](A00.md)
 
 ## 参考资料
 
 英文资料：
 
-- [Linux Shell Scripting Tutorial v2.0](https://bash.cyberciti.biz/guide/Main_Page)
+* [Linux Shell Scripting Tutorial v2.0](https://bash.cyberciti.biz/guide/Main_Page)
+
+中文资料：
+
+* [Linux Shell脚本教程](http://c.biancheng.net/cpp/shell/)
