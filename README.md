@@ -19,8 +19,7 @@ Shell虽然不是Linux/Unix系统内核的一部分，但它调用了系统核�
 * [交互脚本·Dialog](A10.md)
 * [awk编程](A11.md)
 * [Shell正则表达式](A12.md)
-* []
-* []
+* [Shell中的$x变量](A13.md)
 
 ## 参考资料
 
