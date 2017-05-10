@@ -27,7 +27,7 @@ Shell虽然不是Linux/Unix系统内核的一部分，但它调用了系统核�
 
 英文资料：
 
-* [Linux Shell Scripting Tutorimarkdownfiles/Al v2.0](https://bmarkdownfiles/Ash.cyberciti.biz/guide/Mmarkdownfiles/Ain_Pmarkdownfiles/Age)
+* [Linux Shell Scripting Tutorial (LSST) v2.0](https://bash.cyberciti.biz/guide/Main_Page)
 
 中文资料：
 
