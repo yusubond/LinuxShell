@@ -47,11 +47,18 @@ endif
 "set hidden		" Hide buffers when they are abandoned
 "set mouse=a		" Enable mouse usage (all modes)
 
+"显示输入的命令
 set showcmd
 
 set number
 set relativenumber
-"set cursorline
+
+"突出显示当前行
+set cursorline
+
+"自动缩进
+set autoindent
+set cindent
 
 set tabstop=4
 set softtabstop=4
@@ -59,9 +66,15 @@ set softtabstop=4
 set incsearch
 set hlsearch
 
+"自动保存
+set autowrite
+
+set ruler
+set cmdheight=1
+
+set foldenable
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
-
