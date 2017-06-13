@@ -1,6 +1,0 @@
-#!/bin/bash
-mysql_user=root
-mysql_passwd=linux
-hss_conf=~/ETC/hss.conf
-sed -r -i "s/@MYSQL_user@/$mysql_user/" $hss_conf
-sed -r -i "s/@MYSQL_pass@/$mysql_passwd/" $hss_conf
