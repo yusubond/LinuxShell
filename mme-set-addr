@@ -1,0 +1,38 @@
+#!/bin/bash
+mme_iface_name=`ip addr | awk -v FS=": " '/BROADCAST/{print $2}'`
+if [ $# -lt 3 ]; then
+  echo "Errors... Need agrs"
+  echo "Usage: ./mme-set-addr -m mme-ip -s spgw-ip"
+  echo "Examples: ./mme-set-addr -m 192.168.12.12/24 -s 192.168.12.13/24"
+  exit 1
+fi
+case "$1" in
+  -m)
+  mme_addr=$2
+  case "$3" in
+    -s)
+    spgw_addr=$4
+    ;;
+    *)
+    echo "Usage: ./mme-set-addr -m mme-ip -s spgw-ip"
+    echo "Examples: ./mme-set-addr -m 192.168.12.12/24 -s 192.168.12.13/24"
+    exit 1
+    ;;
+  esac
+  ;;
+  *)
+  echo "Usage: ./mme_set-addr -m mme-ip -s spgw-ip"
+  echo "Examples: ./mme-set-addr -m 192.168.12.12/24 -s 192.168.12.13/24"
+  exit 1
+  ;;
+esac
+mme_conf=mme.conf
+# config interface for mme
+sed -r -i "/MME_INTERFACE_NAME_FOR_S1_MME/ s-\".*\"-\"${mme_iface_name}\"-" $mme_conf
+sed -r -i "/MME_INTERFACE_NAME_FOR_S11_MME/ s-\".*\"-\"${mme_iface_name}\"-" $mme_conf
+# config ip for mme and spgw
+sed -r -i "/MME_IPV4_ADDRESS_FOR_S1_MME/ s-\".*\"-\"${mme_addr}\"-" $mme_conf
+sed -r -i "/MME_IPV4_ADDRESS_FOR_S11_MME/ s-\".*\"-\"${spgw_addr}\"-" $mme_conf
+sed -r -i "/SGW_IPV4_ADDRESS_FOR_S11/ s-\".*\"-\"$spgw_addr\"-" $mme_conf
+
+echo "Configured interface ${mme_iface_name} with ip ${mme_addr} for mme, and ip ${spgw_addr} for spgw"
