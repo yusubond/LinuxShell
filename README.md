@@ -1,4 +1,4 @@
-## [Linux Shell](shell)
+## [Linux Shell](shell/README.md)
 
 Shell本身是一个用c语言编写的程序，是用户使用Linux/Unix的桥梁，用户大部分工作可以通过Shell完成。Shell既是一种命令语言，也是一种程序设计语言。作为命令语言，它可以交互式地解释和执行用户输入的命令；作为程序设计语言，它定义了各种变量和参数，并提供了许多高级语言中才用的控制结构，包括循环和分支。
 
@@ -22,6 +22,7 @@ Shell虽然不是Linux/Unix系统内核的一部分，但它调用了系统核�
 * [Shell正则表达式](shell/A12.md)
 * [Shell中的$x变量](shell/A13.md)
 * [Shell应用实例:远程自动登录](shell/A14.md)
+* [Shell常用技巧](shell/shell_tips.md)
 
 ### 参考资料
 
@@ -30,7 +31,7 @@ Shell虽然不是Linux/Unix系统内核的一部分，但它调用了系统核�
 * [Linux Shell Scripting Tutorial (LSST) v2.0](https://bash.cyberciti.biz/guide/Main_Page)
 
 
-## [Linux文件系统](Linux)
+## [Linux文件系统](Linux/README.md)
 
 ### 目录
 
