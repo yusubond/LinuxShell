@@ -24,6 +24,8 @@ client端的ssh命令主要包括：
 
   SSH分为客户端openssh-client和服务端openssh-server，根据需要自行安装即可。
 
+  **安装客户端**
+
   ```
   # 安装客户端
   $ sudo apt-get install -y openssh-client
@@ -39,22 +41,29 @@ client端的ssh命令主要包括：
   $ netstat -tlp   #tcp监听端口
   ```
 
-### 向ssh-agent添加密钥
+  **安装服务端**
 
-  第一步：向ssh的配置文件(~/.ssh/config)添加以下信息:
+  ```
+  # 安装服务端
+  $ sudo apt-get install -y openssh-server
+  ```
+
+### 服务端配置公钥
+
+  ```
+  # /etc/ssh/目录下添加authorized_keys文件，权限600
+  # 并将id_rsa.pub中的内容拷贝至该文件
+  # 在/etc/ssh/sshd_config中添加以下字段
+  $ AuthorizedKeysFile      /etc/ssh/authorized_keys
+  ```
+
+### 客户端配置私钥，别名，免密登录
+
+  第一步：客户端ssh的配置文件(~/.ssh/config)添加以下信息:
 
   ```
   # 先确认/etc/ssh/ssh_config中是否打开ForwardAgent
   # ForwardAgent yes
-
-  # 在~/.ssh目录下创建config文件
-  $ touch config
-  # config内容：
-  # Host *
-  #   IdentityFile ~/.ssh/id_rsa
-  # Host github.com
-  #   IdentityFile ~/.ssh/github_rsa.priv
-  #   User git
   ```
 
   第二步：启动ssh-agent，并添加密钥
@@ -65,21 +74,16 @@ client端的ssh命令主要包括：
   $ ssh-add ~/.ssh/id_rsa
   ```
 
-### 别名+免密钥登录设置
-
-  第一步：在/etc/hosts中添加主机与ip的映射关系；  
-  第二步：在~/.ssh/config文件中添加别名及用户名信息。  
+  第三步：配置~/.ssh/config文件，添加别名及用户名信息等信息。  
 
   ```
-  # /etc/hosts
-  $ 192.168.10.10 master
-
   # ~/.ssh/config
-  $ host my-master
-  $ hostname 192.168.10.10
-  $ user subond
+  $ host alias_name
+  $     IdentityFile ~/.ssh/id_rsa
+  $     hostname host_ip
+  $     user user_name
 
-  # 经过以上配置，直接使用ssh my-master即可
+  # 经过以上配置，直接使用ssh alias_name即可
   ```
 
   参考链接:[博客园](http://www.cnblogs.com/ysocean/p/6959776.html)
