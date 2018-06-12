@@ -85,5 +85,10 @@ client端的ssh命令主要包括：
 
   # 经过以上配置，直接使用ssh alias_name即可
   ```
+  
+  需要注意的是：`.ssh`目录的权限需要为700，`authorized_keys`文件权限为600，且为登录用户及用户组所属
 
-  参考链接:[博客园](http://www.cnblogs.com/ysocean/p/6959776.html)
+  参考链接:
+  
+  1. [博客园](http://www.cnblogs.com/ysocean/p/6959776.html)
+  2. [ssh 建立信任关系后，仍需要输入密码](https://blog.csdn.net/qq_32239417/article/details/52774199)
