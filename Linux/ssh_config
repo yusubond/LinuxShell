@@ -1,3 +1,6 @@
-Host *
-	ForwardAgent yes
-	IdentityFile ~/.ssh/id_rsa
+ForwardAgent yes
+Host name
+	ServerAliveInterval 60
+	IdentityFile ~/.ssh/sde-env
+	hostname 192.168.0.11
+	user ubuntu

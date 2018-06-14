@@ -1,3 +1,7 @@
+## Linux相关问题及解法
+
+---
+
 1. 内核相关
 
 ```
@@ -19,5 +23,23 @@ cd /lib/modules/4.4.0-53-generic/
 #链接文件
 ln -s /usr/src/linux-headers-4.4.0-53-generic build
 ```
+---
 
 参考资料：[No such file or directory](https://blog.csdn.net/qq_15437667/article/details/69831509)
+
+2. packet
+
+ubuntu package XXX needs to be reinstalled, but I can't find an archive
+
+解决办法：
+
+```
+# 备份dpkg状态文件
+$ sudo cp /var/lib/dpkg/status status.bak
+
+# 删除坏掉的package状态
+$ sudo vim /var/lib/dpkg/status
+$ apt-get -f install
+```
+
+参考资料： [@waitig](https://www.waitig.com/ubuntu-package-xxx-needs-to-be-reinstalled-but-i-cant-find-an-archive-%E4%BF%AE%E5%A4%8D.html)
