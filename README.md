@@ -1,4 +1,4 @@
-## [Linux Shell](shell/README.md)
+## [Linux Shell](shell/README.md):cn:
 
 Shell本身是一个用c语言编写的程序，是用户使用Linux/Unix的桥梁，用户大部分工作可以通过Shell完成。Shell既是一种命令语言，也是一种程序设计语言。作为命令语言，它可以交互式地解释和执行用户输入的命令；作为程序设计语言，它定义了各种变量和参数，并提供了许多高级语言中才用的控制结构，包括循环和分支。
 
