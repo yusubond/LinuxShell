@@ -23,9 +23,10 @@ cd /lib/modules/4.4.0-53-generic/
 #链接文件
 ln -s /usr/src/linux-headers-4.4.0-53-generic build
 ```
----
 
 参考资料：[No such file or directory](https://blog.csdn.net/qq_15437667/article/details/69831509)
+
+---
 
 2. packet
 
