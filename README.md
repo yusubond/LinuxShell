@@ -41,3 +41,4 @@ Shell虽然不是Linux/Unix系统内核的一部分，但它调用了系统核�
 * [SSL协议](Linux/Secure_Shell.md)
   * [免密登录](Linux/Secure_Shell.md)  
   * [私钥、公钥配置](Linux/Secure_Shell.md)
+* [ubuntu常见问题](ubuntu.md)
