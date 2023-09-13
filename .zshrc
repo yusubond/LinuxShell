@@ -108,8 +108,6 @@ alias ll='ls -l'
 alias la='ls -a'
 alias gcc="gcc-11"
 # change direcotry alias
-alias tgwp4='cd /Users/subond/Tencent/codeProject/tgw_hyperplane'
-alias tt='cd /Users/subond/Tencent/codeProject/'
 
 # history timestamp
 export HISTFILESIZE=5000
