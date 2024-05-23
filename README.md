@@ -34,3 +34,16 @@
 英文资料：
 
 * [Linux Shell Scripting Tutorial (LSST) v2.0](https://bash.cyberciti.biz/guide/Main_Page)
+
+
+问题：
+发现每次登录目标机器，目标机器的环境变量 LANG 都是中文。
+
+解决办法：
+ssh -v user@ip
+
+可以查看环境变量的传递问题。
+
+取消对 LANG 的传递。
+
+https://blog.csdn.net/sanjuejianke/article/details/78111523
